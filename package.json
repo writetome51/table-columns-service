@@ -1,0 +1,37 @@
+{
+  "name": "@writetome51/table-data-service",
+  "version": "1.0.0",
+  "description": "Abstract typescript/javascript class for holding data that has been prepped to be displayed in a table",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/table-data-service.git"
+  },
+  "keywords": [
+    "table",
+    "data",
+    "source",
+    "typescript",
+    "abstract",
+    "class"
+  ],
+  "author": "Steve Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/writetome51/table-data-service/issues"
+  },
+  "homepage": "https://github.com/writetome51/table-data-service#readme",
+  "devDependencies": {
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "basic-data-handling": "~1.0.13",
+    "@writetome51/base-class": "~0.0.2",
+    "@writetome51/array-get-and-remove-by-index": "~1.0.2",
+    "@writetome51/array-insert-at": "~2.0.0"
+  }
+}
