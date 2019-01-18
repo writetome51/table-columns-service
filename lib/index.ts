@@ -12,7 +12,7 @@ import { ITableColumn } from '../../typescript interface libraries/table-column-
 
 export abstract class TableDataService extends BaseClass {
 
-  // public columns: ITableColumn[];
+	// public columns: ITableColumn[];
 	private __columnBeingMoved: ITableColumn;
 	private __columns: ITableColumn[];
 
