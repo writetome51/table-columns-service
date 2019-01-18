@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "basic-data-handling": "~1.0.13",
+    "@writetome51/array-get-indexes-intermediate": "~1.0.5",
     "@writetome51/base-class": "~0.0.2",
     "@writetome51/array-get-and-remove-by-index": "~1.0.2",
     "@writetome51/array-insert-at": "~2.0.0"

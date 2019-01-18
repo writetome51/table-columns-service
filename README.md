@@ -1,7 +1,8 @@
-# TableDataService
+# TableColumnDataService
 
 An abstract TypeScript/JavaScript class for holding data that has been prepped to be displayed in a table.  
-It is not specific to any particular GUI, but it does support the re-ordering of columns.
+It is not specific to any particular GUI, but it does support the re-ordering of columns, and the 
+hiding of columns.
 
 
 ## Installation
@@ -35,6 +36,10 @@ beginColumnMove(columnIndex): void
 
 endColumnMove(newIndex): void
     // re-inserts the column removed during this.beginColumnMove(), at newIndex.
+    
+toggleColumnVisibility(name): void
+    // finds column with name that matches passed name, and, sets its visibility
+    // to the opposite of its current value.
 ```
 The methods below are not important to know about in order to use this  
 class.  They're inherited from [BaseClass](https://github.com/writetome51/typescript-base-class#baseclass) .
