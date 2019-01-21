@@ -1,7 +1,7 @@
-# TableColumnDataService
+# TableColumnsService
 
-An abstract TypeScript/JavaScript class for holding data that has been prepped to be displayed in a table.  
-It is not specific to any particular GUI, but it does support the re-ordering of columns, and the 
+An abstract TypeScript/JavaScript class for manipulating display table columns.  
+It is not specific to any particular GUI.  It supports the re-ordering of columns, and the 
 hiding of columns.
 
 
@@ -9,19 +9,19 @@ hiding of columns.
 
 You must have npm installed first. Then, in the command line:
 
-    npm install @writetome51/table-data-service
+    npm install @writetome51/table-columns-service
 
 ## Loading
 
     // if using TypeScript:
-    import { TableDataService } from '@writetome51/table-data-service';
+    import {  TableColumnsService } from '@writetome51/table-columns-service';
     // if using ES5 JavaScript:
-    var TableService =  require('@writetome51/table-data-service').TableDataService;
+    var  TableColumnsService =  require('@writetome51/table-columns-service').TableColumnsService;
     
 
 ## Properties
 
-### columns :  [ITableColumn](https://github.com/writetome51/typescript-base-class#baseclass)[]  (read-writable)
+### columns :  {visible: boolean}[]  (read-writable)
 
 ### className : string (read-only)  
 ##### (Not important. Inherited from BaseClass (see Inheritance Chain below).)
@@ -29,17 +29,11 @@ You must have npm installed first. Then, in the command line:
 
 ## Methods
 ```
-beginColumnMove(columnIndex): void
-    // removes column, identified by index, from this.columns.
-    // this.endColumnMove() is intended to be called soon after, during which
-    // the removed column is re-inserted in this.columns at a new index.
-
-endColumnMove(newIndex): void
-    // re-inserts the column removed during this.beginColumnMove(), at newIndex.
+moveColumn(oldIndex, newIndex): void
+    // moves column in this.columns from oldIndex to newIndex.
     
-toggleColumnVisibility(name): void
-    // finds column with name that matches passed name, and, sets its visibility
-    // to the opposite of its current value.
+toggleColumnVisibility(columnIndex): void
+    // sets column's 'visible' property to the opposite of its current value.
 ```
 The methods below are not important to know about in order to use this  
 class.  They're inherited from [BaseClass](https://github.com/writetome51/typescript-base-class#baseclass) .
@@ -86,7 +80,7 @@ protected   _runMethod_and_returnThis(
 
 ## Inheritance Chain
 
-TableDataService<--[BaseClass](https://github.com/writetome51/typescript-base-class#baseclass)
+ TableColumnsService<--[BaseClass](https://github.com/writetome51/typescript-base-class#baseclass)
 
 
 ## License

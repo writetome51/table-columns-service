@@ -5,7 +5,7 @@ var __extends = (this && this.__extends) || (function () {
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
             function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
-    };
+    }
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -19,6 +19,7 @@ var TestTableDataService = /** @class */ (function (_super) {
     function TestTableDataService() {
         var _this = _super.call(this) || this;
         _this.columns = [
+            // @ts-ignore
             { name: 'id', visible: true, contentOfEachCell: [] },
             { name: 'last name', visible: true, contentOfEachCell: [] },
             { name: 'first name', visible: true, contentOfEachCell: [] },
@@ -27,7 +28,7 @@ var TestTableDataService = /** @class */ (function (_super) {
         return _this;
     }
     return TestTableDataService;
-}(index_1.TableColumnDataService));
+}(index_1.TableColumnsService));
 exports.TestTableDataService = TestTableDataService;
 var testTableDataService = new TestTableDataService();
 // Test 1: make sure properties are inherited from BaseClass:
@@ -36,20 +37,20 @@ if (testTableDataService.className === 'TestTableDataService')
 else
     console.log('test 1 FAILED');
 // Test 2: make sure the moving of a column works:
-testTableDataService.beginColumnMove(3);
-testTableDataService.endColumnMove(0);
+testTableDataService.moveColumn(3, 0);
+// @ts-ignore
 if (testTableDataService.columns[0].name === 'email')
     console.log('test 2 passed');
 else
     console.log('test 2 FAILED');
 // Test 3: make sure the hiding of a column works:
-testTableDataService.toggleColumnVisibility('email');
+testTableDataService.toggleColumnVisibility(0);
 if (testTableDataService.columns[0].visible === false)
     console.log('test 3 passed');
 else
     console.log('test 3 FAILED');
 // Test 4: make sure the showing of a column works:
-testTableDataService.toggleColumnVisibility('email');
+testTableDataService.toggleColumnVisibility(0);
 if (testTableDataService.columns[0].visible === true)
     console.log('test 4 passed');
 else

@@ -1,7 +1,7 @@
 {
-  "name": "@writetome51/table-data-service",
+  "name": "@writetome51/table-columns-service",
   "version": "1.0.0",
-  "description": "Abstract typescript/javascript class for holding data that has been prepped to be displayed in a table",
+  "description": "Abstract typescript/javascript class for manipulating display-table columns",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/writetome51/table-data-service.git"
+    "url": "git+https://github.com/writetome51/table-columns-service.git"
   },
   "keywords": [
     "table",
@@ -22,15 +22,14 @@
   "author": "Steve Thompson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/writetome51/table-data-service/issues"
+    "url": "https://github.com/writetome51/table-columns-service/issues"
   },
-  "homepage": "https://github.com/writetome51/table-data-service#readme",
+  "homepage": "https://github.com/writetome51/table-columns-service#readme",
   "devDependencies": {
     "typescript": "^3.0.1"
   },
   "dependencies": {
     "basic-data-handling": "~1.0.13",
-    "@writetome51/array-get-indexes-intermediate": "~1.0.5",
     "@writetome51/base-class": "~0.0.2",
     "@writetome51/array-get-and-remove-by-index": "~1.0.2",
     "@writetome51/array-insert-at": "~2.0.0"
